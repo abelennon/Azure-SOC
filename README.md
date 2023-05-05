@@ -1,10 +1,11 @@
-# Azure-SOC
-# Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/fp895VM.png)
+# Establishing a Security Operations Center (SOC) featuring a Honeypot on Microsoft Azure
 
 ## Introduction
 
 This project involved me constructing a honeynet on Microsoft Azure and ingesting logs from different resources into a Log Analytics workspace. Subsequently, I used Microsoft Sentinel to generate attack maps, trigger alerts, and create incidents. I recorded certain security metrics in an unsecured environment for 24 hours, fortified the environment by implementing security controls, monitored metrics for an additional 24 hours, and presented the findings below. I utilized the metrics to create a geographical representation of the attackers' locations and provide a summary of the overall enhancement achieved by implementing security controls. Moreover, I performed a sequence of simulated attacks on the system.
+
+## Architecture of the Lab
+![Cloud Honeynet / SOC](https://i.imgur.com/qtY8Sey.png)
 
 ## Metrics Gathered
 
