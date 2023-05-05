@@ -7,6 +7,23 @@ This project involved me constructing a honeynet on Microsoft Azure and ingestin
 ## Architecture of the Lab
 ![Cloud Honeynet / SOC](https://i.imgur.com/qtY8Sey.png)
 
+## Technologies employed, regulations adhered to, and Azure components utilized.
+
+- Virtual Network (VNet)
+- Network Security Group (NSG)
+- Virtual Machines (2 Window/1 Linux)
+- Log Analytics Workspace
+- KQL Queries
+- Azure Key Vault
+- Azure Storage Account
+- Microsoft Sentinel
+- Microsoft Defender for Cloud
+- Windows Remote Desktop
+- Command Line Interface
+- PowerShell
+- NIST SP 800-53
+- NIST SP 800-61
+
 ## Metrics Gathered
 
 - SecurityEvent (Windows Event Logs)
@@ -16,7 +33,7 @@ This project involved me constructing a honeynet on Microsoft Azure and ingestin
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![Architecture Diagram](https://i.imgur.com/0fI2lto.png)
 
 ## Architecture After Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
