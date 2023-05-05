@@ -36,7 +36,7 @@ This project involved me constructing a honeynet on Microsoft Azure and ingestin
 ![Architecture Diagram](https://i.imgur.com/0fI2lto.png)
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![Architecture Diagram](https://i.imgur.com/yo0TDsK.png)
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
