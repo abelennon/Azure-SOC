@@ -1,6 +1,6 @@
 # Azure-SOC
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![Cloud Honeynet / SOC](https://i.imgur.com/fp895VM.png)
 
 ## Introduction
 
@@ -35,6 +35,7 @@ Regarding the "BEFORE" metrics, all resources were initially deployed in a manne
 Concerning the "AFTER" metrics, the Network Security Groups were fortified by blocking ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by both their built-in firewalls and Private Endpoint.
 
 ## Attack Maps Before Hardening / Security Controls
+![MSSQL Auth Failures](https://i.imgur.com/SdtbwDI.png)<br>
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/ZsLVqF4.png)<br>
 ![Linux Syslog Auth Failures](https://i.imgur.com/E9u8cbN.png)<br>
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/CASF2Rc.png)<br>
