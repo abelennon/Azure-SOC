@@ -43,8 +43,11 @@ Concerning the "BEFORE" metrics, all resources were deployed initially in a way 
 
 ## Attack Maps Before Hardening / Security Controls
 ![MSSQL Auth Failures](https://i.imgur.com/SdtbwDI.png)<br>
+
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/ZsLVqF4.png)<br>
+
 ![Linux Syslog Auth Failures](https://i.imgur.com/E9u8cbN.png)<br>
+
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/CASF2Rc.png)<br>
 
 ## Metrics Before Hardening / Security Controls
