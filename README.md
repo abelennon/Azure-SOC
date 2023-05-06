@@ -5,18 +5,22 @@
 This project involved me constructing a honeynet on Microsoft Azure and ingesting logs from different resources into a Log Analytics workspace. Subsequently, I used Microsoft Sentinel to generate attack maps, trigger alerts, and create incidents. I recorded certain security metrics in an unsecured environment for 24 hours, fortified the environment by implementing security controls, monitored metrics for an additional 24 hours, and presented the findings below. I utilized the metrics to create a geographical representation of the attackers' locations and provide a summary of the overall enhancement achieved by implementing security controls. Moreover, I performed a sequence of simulated attacks on the system.
 
 ## Architecture of the Lab
-![Cloud Honeynet / SOC](https://i.imgur.com/qtY8Sey.png)
 
-## Technologies employed, regulations adhered to, and Azure components utilized.
+The architecture of the mini honeynet in Azure consists of the following components:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
-- Virtual Machines (2 Window/1 Linux)
+- Virtual Machines (2 windows, 1 linux)
 - Log Analytics Workspace
-- KQL Queries
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
+
+![Cloud Honeynet / SOC](https://i.imgur.com/qtY8Sey.png)
+
+## Technologies Employed & Regulations Followed
+
+- KQL Queries
 - Microsoft Defender for Cloud
 - Windows Remote Desktop
 - Command Line Interface
@@ -38,19 +42,9 @@ This project involved me constructing a honeynet on Microsoft Azure and ingestin
 ## Architecture After Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/yo0TDsK.png)
 
-The architecture of the mini honeynet in Azure consists of the following components:
+Concerning the "BEFORE" metrics, all resources were deployed initially in a way that made them accessible via the internet. This encompassed the Virtual Machines, which had their Network Security Groups and built-in firewalls configured to permit all traffic, and all other resources were deployed with public endpoints that were visible to the internet.
 
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
-
-Regarding the "BEFORE" metrics, all resources were initially deployed in a manner where they were accessible to the internet. This included the Virtual Machines which had their Network Security Groups and built-in firewalls configured to allow all traffic, and all other resources were deployed with public endpoints that were visible to the internet.
-
-Concerning the "AFTER" metrics, the Network Security Groups were fortified by blocking ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by both their built-in firewalls and Private Endpoint.
+Regarding the "AFTER" metrics, the Network Security Groups were fortified by blocking ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by both their built-in firewalls and Private Endpoint.
 
 ## Attack Maps Before Hardening / Security Controls
 ![MSSQL Auth Failures](https://i.imgur.com/SdtbwDI.png)<br>
@@ -74,7 +68,7 @@ Stop Time 2023-04-30 22:27:31<br>
 
 ## Attack Maps After Hardening / Security Controls
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+```During the 24-hour period after fortification, none of the map queries yielded any outcomes because there were no instances of malicious activity.```
 
 ## Metrics After Hardening / Security Controls
 
@@ -89,6 +83,16 @@ Stop Time	2023-05-02 23:50:58<br>
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
+
+## Overall Improvement
+
+| Metric                   | Change After Securing Environment
+| ------------------------ | ---------------------------------
+| SecurityEvent            | -76.28%
+| Syslog                   | -99.39%
+| SecurityAlert            | -100.00%
+| SecurityIncident         | -100.00%
+| AzureNetworkAnalytics_CL | -100.00%
 
 ## Conclusion
 
