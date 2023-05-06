@@ -39,12 +39,7 @@ The architecture of the mini honeynet in Azure consists of the following compone
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/0fI2lto.png)
 
-## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/yo0TDsK.png)
-
 Concerning the "BEFORE" metrics, all resources were deployed initially in a way that made them accessible via the internet. This encompassed the Virtual Machines, which had their Network Security Groups and built-in firewalls configured to permit all traffic, and all other resources were deployed with public endpoints that were visible to the internet.
-
-Regarding the "AFTER" metrics, the Network Security Groups were fortified by blocking ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by both their built-in firewalls and Private Endpoint.
 
 ## Attack Maps Before Hardening / Security Controls
 ![MSSQL Auth Failures](https://i.imgur.com/SdtbwDI.png)<br>
@@ -65,6 +60,11 @@ Stop Time 2023-04-30 22:27:31<br>
 | SecurityAlert            | 7
 | SecurityIncident         | 151
 | AzureNetworkAnalytics_CL | 1282
+
+## Architecture After Hardening / Security Controls
+![Architecture Diagram](https://i.imgur.com/yo0TDsK.png)
+
+Regarding the "AFTER" metrics, the Network Security Groups were fortified by blocking ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by both their built-in firewalls and Private Endpoint.
 
 ## Attack Maps After Hardening / Security Controls
 
